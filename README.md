@@ -32,6 +32,7 @@ This might not work in Windows. (not tested)
 Running by pre-defined scripts:
 
     BASE_URL=https://my.ecoligo.investments npm run test:regression
+    BASE_URL=https://my.ecoligo.investments npm run test:regression-parallel
     BASE_URL=https://my.ecoligo.investments npm run test:smoketest
 
 Single test running command:
