@@ -4,13 +4,13 @@
   "description": "A simple automation test project for a crowdfunding platform with selenium-webdriver",
   "main": "index.js",
   "scripts": {
-    "test:regression": "npx mocha Tests/Crowdfunding --recursive --timeout=30000 --reporter mochawesome --require Configs/RootHooks.js",
+    "test:regression": "npx mocha Tests/Crowdfunding --recursive  --timeout=30000 --reporter mochawesome --require mochawesome/register --require Configs/RootHooks.js",
     "test:smoketest": "npx mocha Tests/Crowdfunding --recursive --timeout=30000 --reporter mochawesome --require Configs/RootHooks.js --grep @smoketest",
     "test:implement": "npx mocha Tests/Crowdfunding/ --recursive --timeout=30000 --reporter mochawesome --require Configs/RootHooks.js --grep @intest"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Jeff406/simple-restapi-test.git"
+    "url": "git+https://github.com/Jeff406/crowdfunding-platform-autotest.git"
   },
   "keywords": [
     "mocha",
@@ -22,9 +22,9 @@
   "author": "Thai Le",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Jeff406/simple-restapi-test/issues"
+    "url": "https://github.com/Jeff406/crowdfunding-platform-autotest/issues"
   },
-  "homepage": "https://github.com/Jeff406/simple-restapi-test#readme",
+  "homepage": "https://github.com/Jeff406/crowdfunding-platform-autotest#readme",
   "dependencies": {
     "chai": "^4.3.7",
     "chromedriver": "^114.0.2",

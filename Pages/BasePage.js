@@ -19,13 +19,14 @@ class BasePage{
         await driver.findElement(By.css(selector)).sendKeys(text);
     }
     async clickBySelector(selector){
-        await driver.wait(until.elementLocated(By.css(selector)), 3000);
         
-        let element = driver.findElement(By.css(selector));
-        await element.click();
-        // const actions = driver.actions({async: true});
-        // await actions.move({origin: element}).click().perform();
+        let element = await this.driver.findElement(By.css(selector));
 
+        try {
+            await element.click();
+        } catch (e) {
+            await this.driver.executeScript("arguments[0].click();", element);
+        }
     }
 
     async selectByValue(selector, value) {

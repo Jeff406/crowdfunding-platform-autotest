@@ -28,7 +28,7 @@ describe('Crowdfunding Platform', () => {
       assert.equal(isCheckedPp, false);
     });
   
-    it('[TC-23] - VERIFY THAT THE USER REGISTRATION FORM IS SUBMITTED SUCCESSFULLY WITH ALL VALID INPUTS @smoketest', async function (){
+    it('[TC-23] - VERIFY THAT THE USER REGISTRATION FORM IS SUBMITTED SUCCESSFULLY WITH ALL VALID INPUTS @smoketest', async function () {
       await page.open();
       await page.enterAllInput(
         'male', 
