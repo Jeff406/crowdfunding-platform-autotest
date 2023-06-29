@@ -83,7 +83,7 @@ The default setup use BASE_URL from the ENV, to run smoke test:
 	                    └── FUNC_POSITIVE_UserRegistration_001.js
 
 
-There are 3 test suites: dynamic tests, functionality tests defined by 3 files (*FUNC_NEGATIVE_UserRegistration_001*, *FUNC_NEGATIVE_UserRegistration_002*, *FUNC_POSITIVE_UserRegistration_001*). These tests cover both positive and negative cases, including different types of testing:
+There are 3 test suites: dynamic tests, functionality tests defined by 3 files (*FUNC_NEGATIVE_UserRegistration_001.js*, *FUNC_NEGATIVE_UserRegistration_002.js*, *FUNC_POSITIVE_UserRegistration_001.js*). These tests cover both positive and negative cases, including different types of testing:
 
 - Dynamic tests: test cases are dynamically generated at run time. Test data is an array of test inputs including the different inputs for the form submission, test description, test ID, related selector to evaluate.
 - Functional cases: general test cases that covers smoke testing and from manual cases that can be automated.
@@ -105,6 +105,11 @@ Test script are defined as below structure
 
 Test 'describe' can also have tags, allowing you to freely select which test suite and scenario to execute.
 
+**Page Object Model**
+
+Page Object Model is used in this project.
+Each test will have a separated session. (https://www.selenium.dev/documentation/test_practices/encouraged/avoid_sharing_state/)
+
 **How to write test cases**
 
 All tests are defined in Tests/Scenarios folder. When there are new requirements, a new folder can be created e.g InvestmentProjects beside UserRegistration folder.
@@ -117,7 +122,7 @@ to make it easy to develop test case and debug. This tag should be removed befor
 
 **Reporting**
 
-Following the completion of the tests, an HTML report will be produced. The document can be found at mochawesome-report/mochawesome.html.
+Following the completion of the tests, an HTML report will be produced. The document can be found at mochawesome-report/mochawesome.html. It includes the information of test data used, every lines of test code are executed.
 
 At runtime, information about the test-running process is displayed in the console along with the running test case and test results, information about the assertion result, and a highlight-colored comparison of the actual result and expected result. 
 
