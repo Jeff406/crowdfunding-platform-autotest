@@ -4,6 +4,8 @@ My excuse for using this User Registration Form at https://my.ecoligo.investment
 Due to lack of time I cannot prepare a real website for test.
 If there is any junk data, it's just 1 or 2 users with invalid names are created. My sorry again.
 
+In the "docs" folder, you will find the solution for the 2 challenges.
+
 **Objectives**
  - To build a automation testing project against the User Registration Form for crowdfunding platform
  - Integrate Mochawesome report
