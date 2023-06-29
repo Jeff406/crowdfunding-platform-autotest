@@ -1,0 +1,98 @@
+[
+    {
+        "testId": "TC-02",
+        "description": "VERIFY THAT THE GENDER DROP-DOWN CANNOT BE LEFT BLANK @smoketest",
+        "formInput": {
+            "gender": "",
+            "title": "Mr.",
+            "investorType": "PrivateInvestor",
+            "firstName": "John",
+            "lastName": "Doe",
+            "email": "leqthai406@gmail.com",
+            "password": "123456?Aa",
+            "tnc": false,
+            "privacyPolicy": false
+        },
+        "validationSelectorKey": "gender"
+    },
+    {
+        "testId": "TC-08",
+        "description": "VERIFY THAT THE FIRST NAME FIELD REJECTS BLANK INPUTS @smoketest",
+        "formInput": {
+            "gender": "male",
+            "title": "Mr.",
+            "investorType": "PrivateInvestor",
+            "firstName": "",
+            "lastName": "Doe",
+            "email": "leqthai406@gmail.com",
+            "password": "123456?Aa",
+            "tnc": true,
+            "privacyPolicy": true
+        },
+        "validationSelectorKey": "firstName"
+    },
+    {
+        "testId": "TC-11",
+        "description": "VERIFY THAT THE LAST NAME FIELD REJECTS BLANK INPUTS @smoketest",
+        "formInput": {
+            "gender": "male",
+            "title": "Mr.",
+            "investorType": "PrivateInvestor",
+            "firstName": "John",
+            "lastName": "",
+            "email": "leqthai406@gmail.com",
+            "password": "123456?Aa",
+            "tnc": true,
+            "privacyPolicy": true
+        },
+        "validationSelectorKey": "lastName"
+    },
+    {
+        "testId": "TC-14",
+        "description": "VERIFY THAT THE EMAIL FIELD REJECTS BLANK INPUTS @smoketest",
+        "formInput": {
+            "gender": "male",
+            "title": "Mr.",
+            "investorType": "PrivateInvestor",
+            "firstName": "John",
+            "lastName": "Doe",
+            "email": "",
+            "password": "123456?Aa",
+            "tnc": true,
+            "privacyPolicy": true
+        },
+        "validationSelectorKey": "email"
+    },
+    {
+        "testId": "TC-17",
+        "description": "VERIFY THAT THE PASSWORD FIELD REJECTS BLANK INPUTS @smoketest",
+        "formInput": {
+            "gender": "male",
+            "title": "Mr.",
+            "investorType": "PrivateInvestor",
+            "firstName": "John",
+            "lastName": "Doe",
+            "email": "leqthai406@gmail.com",
+            "password": "",
+            "tnc": true,
+            "privacyPolicy": true
+        },
+        "validationSelectorKey": "password"
+    },
+    {
+        "testId": "TC-13",
+        "description": "VERIFY THAT THE EMAIL FIELD REJECTS INVALID INPUTS @smoketest",
+        "formInput": {
+            "gender": "male",
+            "title": "Mr.",
+            "investorType": "PrivateInvestor",
+            "firstName": "John",
+            "lastName": "Doe",
+            "email": "leqthai406",
+            "password": "123456?a",
+            "tnc": false,
+            "privacyPolicy": true
+        },
+        "validationSelectorKey": "email"
+    }
+]

@@ -1,0 +1,48 @@
+[
+    {
+        "testId": "TC-17",
+        "description": "VERIFY THAT THE PASSWORD FIELD REJECTS INVALID INPUTS",
+        "formInput": {
+            "gender": "male",
+            "title": "Mr.",
+            "investorType": "PrivateInvestor",
+            "firstName": "John",
+            "lastName": "Doe",
+            "email": "leqthai406@gmail.com",
+            "password": "123",
+            "tnc": false,
+            "privacyPolicy": true
+        }
+    },
+    {
+        "testId": "TC-19",
+        "description": "VERIFY THAT THE FORM REJECT TO SUBMIT IF THE USER DOES NOT ACCEPT TERM AND CONDITION",
+        "formInput": {
+            "gender": "male",
+            "title": "Mr.",
+            "investorType": "PrivateInvestor",
+            "firstName": "John",
+            "lastName": "Doe",
+            "email": "leqthai406@gmail.com",
+            "password": "123456?a",
+            "tnc": false,
+            "privacyPolicy": true
+        }
+    },
+    {
+        "testId": "TC-21",
+        "description": "VERIFY THAT THE FORM REJECT TO SUBMIT IF THE USER DOES NOT ACCEPT PRIVACY POLICY",
+        "formInput": {
+            "gender": "male",
+            "title": "Mr.",
+            "investorType": "PrivateInvestor",
+            "firstName": "John",
+            "lastName": "Doe",
+            "email": "leqthai406@gmail.com",
+            "password": "123456?a",
+            "tnc": true,
+            "privacyPolicy": false
+        }
+    }
+
+]
