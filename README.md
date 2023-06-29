@@ -1,14 +1,15 @@
 **NOTE!!!**
+
 My excuse for using this User Registration Form at https://my.ecoligo.investments/investor/registration for buiding this project.
 Due to lack of time I cannot prepare a real website for test.
 If there is any junk data, it's just 1 or 2 users with invalid names are created. My sorry again.
 
 **Objectives**
- - To build a automation testing project against the User Registration Form for crowdfundiong platform
+ - To build a automation testing project against the User Registration Form for crowdfunding platform
  - Integrate Mochawesome report
 
 **Tech used**
- - nodejs 
+ - nodejs
  - Test runner: mocha 
  - Browser automation and assertion toolchain: selenium-webdriver, chai 
  - Report module: mochawesome
@@ -21,11 +22,12 @@ If there is any junk data, it's just 1 or 2 users with invalid names are created
 **How to install and run the project locally**
 
 To run project locally, node (v18.16.1, lower version would not work) and npm should be pre-installed
+    
     npm install
     npm install -g npx
 
 This was tested in Linux (Ubuntu 23.04) and Google Chrome must be installed in default location and available in PATH env (/usr/bin)
-This might work in Windows. (not tested)
+This might not work in Windows. (not tested)
 
 Running by pre-defined scripts:
 
@@ -58,6 +60,7 @@ The default setup use BASE_URL from the ENV, to run smoke test:
 	│       └── UserRegistration
 	│           ├── FUNC_NEGATIVE_UserRegistration_001.json
 	│           └── FUNC_NEGATIVE_UserRegistration_002.json
+	├── .gitignore
 	├── mochawesome-report
 	│   ├── mochawesome.html
 	│   ├── mochawesome.json
@@ -69,16 +72,15 @@ The default setup use BASE_URL from the ENV, to run smoke test:
 	│   └── InvestorRegistrationPage.js
 	├── README.md
 	└── Tests
-			└── Crowdfunding
-					└── Scenarios
-							├── InvestmentProjects
-							└── UserRegistration
-									├── FunctionalNegative
-									│   ├── FUNC_NEGATIVE_UserRegistration_001.js
-									│   └── FUNC_NEGATIVE_UserRegistration_002.js
-									└── FunctionalPositive
-											└── FUNC_POSITIVE_UserRegistration_001.js
-
+	    └── Crowdfunding
+	        └── Scenarios
+	            ├── InvestmentProjects
+	            └── UserRegistration
+	                ├── FunctionalNegative
+	                │   ├── FUNC_NEGATIVE_UserRegistration_001.js
+	                │   └── FUNC_NEGATIVE_UserRegistration_002.js
+	                └── FunctionalPositive
+	                    └── FUNC_POSITIVE_UserRegistration_001.js
 
 
 There are 3 test suites: dynamic tests, functionality tests defined by 3 files (*FUNC_NEGATIVE_UserRegistration_001*, *FUNC_NEGATIVE_UserRegistration_002*, *FUNC_POSITIVE_UserRegistration_001*). These tests cover both positive and negative cases, including different types of testing:
@@ -129,20 +131,18 @@ Dynamic test by reading testing data from CSV files is supported but need a cust
 For dynamic tests, the test data input should have a pattern something like
 
     {
-			"testId": "TC-19",
-			"description": "VERIFY THAT THE FORM REJECT TO SUBMIT IF THE USER DOES NOT ACCEPT TERM AND CONDITION",
-			"formInput": {
-				"gender": "male",
-				"title": "Mr.",
-				"investorType": "PrivateInvestor",
-				"firstName": "John",
-				"lastName": "Doe",
-				"email": "leqthai406@gmail.com",
-				"password": "123456?a",
-				"tnc": false,
-				"privacyPolicy": true
-			}
+        "testId": "TC-02",
+        "description": "VERIFY THAT THE GENDER DROP-DOWN CANNOT BE LEFT BLANK @smoketest",
+        "formInput": {
+            "gender": "",
+            "title": "Mr.",
+            "investorType": "PrivateInvestor",
+            "firstName": "John",
+            "lastName": "Doe",
+            "email": "leqthai406@gmail.com",
+            "password": "123456?Aa",
+            "tnc": false,
+            "privacyPolicy": false
+        },
+        "validationSelectorKey": "gender"
     }
-
-
-
