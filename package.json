@@ -6,7 +6,8 @@
   "scripts": {
     "test:regression": "npx mocha Tests/Crowdfunding --recursive  --timeout=30000 --reporter mochawesome --require mochawesome/register --require Configs/RootHooks.js",
     "test:smoketest": "npx mocha Tests/Crowdfunding --recursive --timeout=30000 --reporter mochawesome --require Configs/RootHooks.js --grep @smoketest",
-    "test:implement": "npx mocha Tests/Crowdfunding/ --recursive --timeout=30000 --reporter mochawesome --require Configs/RootHooks.js --grep @intest"
+    "test:implement": "npx mocha Tests/Crowdfunding/ --recursive --timeout=30000 --reporter mochawesome --require Configs/RootHooks.js --grep @intest",
+    "test:regression-parallel": "npx mocha Tests/Crowdfunding/ --recursive --parallel --timeout=30000 --reporter mochawesome --require mochawesome/register --require Configs/RootHooks.js"
   },
   "repository": {
     "type": "git",
