@@ -19,7 +19,7 @@ In the "docs" folder, you will find the solution for the 2 challenges.
 **Features**
 - The project allows for the implementation of specific test cases via tags (@). For example, when we need to smoke test the production, some test cases must be skipped (for example, load testing), so we simply include @smoketest in the running options (you will know later), and only test cases with the tag @smoketest will be performed.
 - Dynamic evaluations are available.
-- The test report includes useful debugging information, such as the request parameter in each test, which you can import to Postman for further investigation
+- The test report includes useful debugging information, such as the input data in each test which you can use to manually reproduce the issue.
 
 **How to install and run the project locally**
 
