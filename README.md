@@ -28,14 +28,18 @@ To run project locally, node (v18.16.1, lower version would not work) and npm sh
     npm install
     npm install -g npx
 
-This was tested in Linux (Ubuntu 23.04) and Google Chrome must be installed in default location and available in PATH env (/usr/bin)
-This might not work in Windows. (not tested)
+This was tested in Linux (Ubuntu 23.04) and Google Chrome must be installed in default location
+~~This might not work in Windows. (not tested)~~
 
-Running by pre-defined scripts:
+In Linux, running by pre-defined scripts:
 
     BASE_URL=https://my.ecoligo.investments npm run test:regression
     BASE_URL=https://my.ecoligo.investments npm run test:regression-parallel
     BASE_URL=https://my.ecoligo.investments npm run test:smoketest
+
+In Windows Command Prompt
+
+    set BASE_URL=https://my.ecoligo.investments&&npm run test:regression
 
 Single test running command:
 
