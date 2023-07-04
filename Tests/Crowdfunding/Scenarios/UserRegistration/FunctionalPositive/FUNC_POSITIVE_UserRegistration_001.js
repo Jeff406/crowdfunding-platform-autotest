@@ -45,7 +45,7 @@ describe('Crowdfunding Platform', () => {
       
       let res = await page.getChromeLogByHttpCode(422);
       
-      assert.equal(res.length, 0,  `Expect there is (1) response with status code 422, actual (${res.length})`);
+      assert.equal(res.length, 0,  `Expect there is (0) response with status code 422, actual (${res.length})`);
     });
   });
 });
