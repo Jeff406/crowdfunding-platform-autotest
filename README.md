@@ -138,6 +138,7 @@ The html report and console log display information about the test execution pro
 **Limitations**
 
 Screenshot for each failed test case is not available
+
 Dynamic test by reading testing data from CSV files is supported but need a custom configuration so only data from json are used now.
 
 For dynamic tests, the test data input should have a pattern something like
