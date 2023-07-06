@@ -17,7 +17,7 @@ describe('Crowdfunding Platform', () => {
       await page.open();
       await page.scrollFromPassWordField();
   
-      let tncElement = await page.getElement(selectors.privacyPolicy);
+      let tncElement = await page.getElement(selectors.tnc);
       let ppElement = await page.getElement(selectors.privacyPolicy);
       
       let isCheckedTnc = await tncElement.isSelected(); 
