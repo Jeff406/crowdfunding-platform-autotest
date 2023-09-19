@@ -1,4 +1,5 @@
 const baseUrl = process.env.BASE_URL;
+const selectors = require('../Fixtures/PageFixtures/BasePageFixtures').selectors;
 const {By, Select, until} = require('selenium-webdriver');
 const { Type } = require('selenium-webdriver/lib/logging');
 
@@ -9,6 +10,10 @@ class BasePage{
     }
     async goTo(path){
         await driver.get(baseUrl + path);
+    }
+
+    async acceptCookie() {
+        this.clickBySelector(selectors.acceptCookiesBtn);
     }
 
     getBaseUrl(){

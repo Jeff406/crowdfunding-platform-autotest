@@ -9,6 +9,8 @@ describe('Crowdfunding Platform', () => {
   
     beforeEach(async function () {
       page = new InvestorRegistrationPage(global.driver);
+      await page.open();
+      await page.acceptCookie();
     })
       
     const tests = require('../../../../../Fixtures/ParameterizedTests/UserRegistration/FUNC_NEGATIVE_UserRegistration_002.json');
@@ -21,7 +23,6 @@ describe('Crowdfunding Platform', () => {
         addContext(this, {title: 'Test description', value: test.description});
         addContext(this, {title: 'Test data', value: formInput});
 
-        await page.open();
         await page.enterAllInput(
           formInput.gender, 
           formInput.title, 

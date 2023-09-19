@@ -1,0 +1,3 @@
+exports.selectors = {
+    acceptCookiesBtn: '#CybotCookiebotDialogBodyButtonAccept'
+}

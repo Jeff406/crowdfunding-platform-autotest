@@ -11,10 +11,11 @@ describe('Crowdfunding Platform', () => {
   
     beforeEach(async function () {
       page = new InvestorRegistrationPage(global.driver);
+      await page.open();
+      await page.acceptCookie();
     })
       
     it('[TC-23] - VERIFY THAT THE CHECKBOX TO AGREE TO THE TERMS AND CONDITIONS AND PRIVACY POLICY CHECKBOX ARE UNCHECKED BY DEFAULT', async function (){
-      await page.open();
       await page.scrollFromPassWordField();
   
       let tncElement = await page.getElement(selectors.tnc);
@@ -29,7 +30,6 @@ describe('Crowdfunding Platform', () => {
     });
   
     it('[TC-23] - VERIFY THAT THE USER REGISTRATION FORM IS SUBMITTED SUCCESSFULLY WITH ALL VALID INPUTS @smoketest', async function () {
-      await page.open();
       await page.enterAllInput(
         'male', 
         'Mr', 
